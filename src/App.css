@@ -1,21 +1,126 @@
 body {
-    background: url(https://xmple.com/wallpaper/blue-gradient-pink-linear-2560x1440-c2-ffb6c1-87ceeb-a-285-f-14.svg);
-    height: 100vh;
+    color: #fff;
+    background: url(https://wallpapers.com/images/hd/clouds-4k-4y7kl2qe79x3lcxi.jpg); 
+    background: url(https://i.pinimg.com/originals/24/d3/dc/24d3dc22f3acbb458d64adb8f7d4af2a.jpg);
+    background: url(https://wallpaperboat.com/wp-content/uploads/2020/03/pink-sky-01.jpg);
+    background: url(https://wallpapers.com/images/hd/city-street-background-w9pr47yli84jbwyk.jpg);
     background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+button {
+    color: #fff;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    display: block;
+}
+
+button:hover {
+    color: rgb(138, 138, 138);
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column;
+    width: 900px;
+    height: 60vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
 }
 
-.weather-box {
-    border: 1px solid white;
-    padding: 100px;
-    border-radius: 1rem;
-    background-color: rgba(240, 255, 255, 0.279);
-    margin-bottom: 80px;
+.wrapper-left,
+.wrapper-right {
+    background-color: rgba(56, 74, 98, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 100%;
+    padding: 50px;
+}
+
+.wrapper-left {
+    flex: 2;
+    border-radius: 1.5rem 0 0 1.5rem;
+    border-right: none;
+}
+
+.wrapper-right {
+    flex: 1;
+    backdrop-filter: blur(6px);
+    border-radius: 0 1.5rem 1.5rem 0;
+}
+
+
+
+/********** WeatherBox ***********/
+
+.weatherBox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.main-temp {
+    font-size: 8rem;
+    position: relative;
+}
+
+.main-temp-unit {
+    font-size: 4rem;
+    position: absolute;
+    right: -25px;
+    top: 0;
+}
+
+.bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.city-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+
+/********** Details ***********/
+
+.right-titles {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #fff;
+}
+
+.details-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+
+
+/********** Locations ***********/
+
+.second {
+    margin-top: 30px;
+}
+
+.locations-box {
+    margin-bottom: 7px;
 }
