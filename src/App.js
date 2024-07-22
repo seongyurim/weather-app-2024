@@ -5,6 +5,7 @@ import WeatherBox from './component/WeatherBox';
 import Locations from './component/Locations';
 import Details from './component/Details';
 import ClipLoader from "react-spinners/ClipLoader";
+import resetImg from '../src/asset/reset.png';
 
 const cities = ['Dublin', 'Edinburgh', 'Hong Kong', 'Vienna'];
 const API_KEY = "7d14207953b97208eecfcca8a8f46279";
@@ -60,6 +61,10 @@ function App() {
     }
   }
 
+  const resetPage = () => {
+    handleCityChange("current");
+  }
+
   return (
     <div>
       {loading ? (
@@ -69,6 +74,9 @@ function App() {
       ): (
         <div className="whole">
           <div className="container">
+            <button className="reset-btn" onClick={resetPage}>
+              <img src={resetImg} className="reset-img" alt="Refresh Game"/>
+            </button>
             <div className="wrapper-left">
               <WeatherBox weather={weather}/>
             </div>
@@ -77,8 +85,8 @@ function App() {
               <Locations cities={cities} setCity={setCity} handleCityChange={handleCityChange}
                 selectedCity={city}/>
             </div>
+            <footer>© seongyurim, July 2024</footer>
           </div>
-          <footer>© seongyurim, July 2024</footer>
         </div>
       )}
     </div>

@@ -5,7 +5,6 @@ body {
     color: rgb(60, 60, 60);
     background: url(https://wallpapers.com/images/hd/clouds-4k-4y7kl2qe79x3lcxi.jpg); 
     background: url(https://i.pinimg.com/originals/24/d3/dc/24d3dc22f3acbb458d64adb8f7d4af2a.jpg);
-    background: url(https://wallpaperboat.com/wp-content/uploads/2020/03/pink-sky-01.jpg);
     background: url(https://wallpapers.com/images/hd/city-street-background-w9pr47yli84jbwyk.jpg);
     background-size: cover;
     height: 100vh;
@@ -27,9 +26,9 @@ button:hover {
 footer {
     position: absolute;
     left: 50%;
-    bottom: 2rem;
+    bottom: -4rem;
     transform: translate(-50%);
-    color: rgb(214, 214, 214);
+    color: #3c3c3c;
 }
 
 .while {
@@ -48,6 +47,21 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
+}
+
+.reset-btn {
+    border-radius: 1.2rem;
+    position: absolute;
+    top: -90px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.reset-img {
+    height: 60px;
+    padding: 10px;
+    filter: invert(18%) sepia(1%) saturate(969%) hue-rotate(333deg) brightness(109%) contrast(87%);
 }
 
 .wrapper-left,
@@ -86,6 +100,7 @@ footer {
     font-weight: 600;
     margin-bottom: 5px;
     color: #ec6e4c;
+    /* color: #004eae; */
 }
 
 .main-temp {
@@ -162,8 +177,12 @@ footer {
 .active-btn {
     border: 1px solid #ec6e4c;
     background-color: #ec6e4c;
+    /* border: 1px solid #004eae; */
+    /* background-color: #004eae; */
 }
 
 .active-txt {
     color: #ec6e4c;
+    /* color: #004eae; */
+    font-weight: 600;
 }
