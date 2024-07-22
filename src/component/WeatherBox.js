@@ -18,7 +18,7 @@ const WeatherBox = ({weather}) => {
     <div className="weatherBox-container">
       <div className="top-box">
         <div className="title">WeatherNow</div>
-        <div className="subtitle">Check out the weather in <strong>{weather?.name}</strong> today.</div>
+        <div className="subtitle">Check out the weather in {weather?.name} today.</div>
         <span className="main-temp">
           <span className="main-temp-num">{Math.floor(weather?.main.temp)}</span>
           <div className="main-temp-unit">°</div>

@@ -6,7 +6,7 @@ import Locations from './component/Locations';
 import Details from './component/Details';
 import ClipLoader from "react-spinners/ClipLoader";
 
-const cities = ['Dublin', 'Edinburgh', 'Hong Kong', 'Wien'];
+const cities = ['Dublin', 'Edinburgh', 'Hong Kong', 'Vienna'];
 const API_KEY = "7d14207953b97208eecfcca8a8f46279";
 
 function App() {
@@ -61,21 +61,24 @@ function App() {
   }
 
   return (
-    <div className="wrapper-left-inner">
+    <div>
       {loading ? (
         <div className="container">
           <ClipLoader color="#fff" loading={loading} size={100} />
         </div>
       ): (
-        <div className="container">
-          <div className="wrapper-left">
-            <WeatherBox weather={weather}/>
+        <div className="whole">
+          <div className="container">
+            <div className="wrapper-left">
+              <WeatherBox weather={weather}/>
+            </div>
+            <div className="wrapper-right">
+              <Details weather={weather}/>
+              <Locations cities={cities} setCity={setCity} handleCityChange={handleCityChange}
+                selectedCity={city}/>
+            </div>
           </div>
-          <div className="wrapper-right">
-            <Details weather={weather}/>
-            <Locations cities={cities} setCity={setCity} handleCityChange={handleCityChange}
-              selectedCity={city}/>
-          </div>
+          <footer>© seongyurim, July 2024</footer>
         </div>
       )}
     </div>
