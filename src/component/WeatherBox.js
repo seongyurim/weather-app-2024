@@ -20,8 +20,9 @@ const WeatherBox = ({weather}) => {
         <div className="title">WeatherNow</div>
         <div className="subtitle">Check out the weather in {weather?.name} today.</div>
         <span className="main-temp">
-          <span className="main-temp-num">{Math.floor(weather?.main.temp)}</span>
-          <div className="main-temp-unit">°</div>
+          <span className="main-temp-num">{Math.floor(weather?.main.temp)}
+            <div className="main-temp-unit">°</div>
+          </span>
         </span>
       </div>
       <div className="bottom-box">

@@ -7,14 +7,15 @@ import Details from './component/Details';
 import ClipLoader from "react-spinners/ClipLoader";
 import resetImg from '../src/asset/reset.png';
 
-const cities = ['Dublin', 'Edinburgh', 'Hong Kong', 'Vienna'];
+const cities = ['Dublin', 'Montreal', 'Hong Kong', 'Vienna'];
 const API_KEY = "7d14207953b97208eecfcca8a8f46279";
 
 function App() {
 
-  const [loading, setLoading] = useState(false);
-  const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState(null);
+  const [loading, setLoading] = useState(false); // 로딩스피너
+  const [weather, setWeather] = useState(null); // 날씨설정
+  const [city, setCity] = useState(null); // 도시설정
+  const [reloading, setReloading] = useState(false); // 동일 위치 리로드
 
   // 현재 위치의 경도와 위도 가져오기
   const getCurrentLocation = () => {
@@ -51,13 +52,15 @@ function App() {
     } else {
       getWeatherByCity();
     }
-  }, [city]);
+  }, [city, reloading]);
 
   const handleCityChange = (city) => {
     if (city === "current") {
       setCity(null);
+      setReloading(prev => !prev);
     } else {
       setCity(city);
+      setReloading(prev => !prev);
     }
   }
 

@@ -2,17 +2,18 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    color: rgb(60, 60, 60);
-    background: url(https://wallpapers.com/images/hd/clouds-4k-4y7kl2qe79x3lcxi.jpg); 
-    background: url(https://i.pinimg.com/originals/24/d3/dc/24d3dc22f3acbb458d64adb8f7d4af2a.jpg);
-    background: url(https://wallpapers.com/images/hd/city-street-background-w9pr47yli84jbwyk.jpg);
+    font-weight: 300;
+    color: #fff;
+    background: url(https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg);
+    background: url(https://images.pexels.com/photos/1033729/pexels-photo-1033729.jpeg); 
     background-size: cover;
     height: 100vh;
     position: relative;
 }
 
 button {
-    color: rgb(60, 60, 60);
+    font-weight: 300;
+    color: #fff;
     border: 0;
     padding: 0;
     background-color: transparent;
@@ -20,7 +21,7 @@ button {
 }
 
 button:hover {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 footer {
@@ -28,10 +29,10 @@ footer {
     left: 50%;
     bottom: -4rem;
     transform: translate(-50%);
-    color: #3c3c3c;
+    color: #fff;
 }
 
-.while {
+.whole {
     width: 100vw;
     height: 100vh;
 }
@@ -54,20 +55,20 @@ footer {
     position: absolute;
     top: -90px;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(35, 35, 35, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .reset-img {
     height: 60px;
     padding: 10px;
-    filter: invert(18%) sepia(1%) saturate(969%) hue-rotate(333deg) brightness(109%) contrast(87%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(230deg) brightness(103%) contrast(103%);
 }
 
 .wrapper-left,
 .wrapper-right {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(35, 35, 35, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     height: 100%;
     padding: 50px;
 }
@@ -100,11 +101,13 @@ footer {
     font-weight: 600;
     margin-bottom: 5px;
     color: #ec6e4c;
-    /* color: #004eae; */
 }
 
 .main-temp {
     font-size: 8rem;
+}
+
+.main-temp-num {
     position: relative;
 }
 
@@ -112,7 +115,7 @@ footer {
     font-size: 4rem;
     position: absolute;
     right: -25px;
-    top: 0;
+    top: 15px;
 }
 
 .bottom-box {
@@ -124,7 +127,7 @@ footer {
 
 .city-name {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     margin: 2px 0;
 }
 
@@ -133,10 +136,10 @@ footer {
 
 .right-titles {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: 1px solid rgb(60, 60, 60);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .details-box {
@@ -168,7 +171,7 @@ footer {
     display: inline;
     width: 10px;
     height: 10px;
-    border: 1px solid rgb(60, 60, 60);
+    border: 1px solid #fff;
     background-color: transparent;
     border-radius: 50%;
     margin-bottom: 7px;
@@ -177,12 +180,9 @@ footer {
 .active-btn {
     border: 1px solid #ec6e4c;
     background-color: #ec6e4c;
-    /* border: 1px solid #004eae; */
-    /* background-color: #004eae; */
 }
 
 .active-txt {
     color: #ec6e4c;
-    /* color: #004eae; */
-    font-weight: 600;
+    font-weight: 500;
 }
