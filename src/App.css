@@ -29,7 +29,7 @@ footer {
     left: 50%;
     bottom: -4rem;
     transform: translate(-50%);
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .whole {
