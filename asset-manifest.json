@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/seongyurim/weather-app-2024.git/static/css/main.86551299.css",
+    "main.js": "/seongyurim/weather-app-2024.git/static/js/main.cdc2bb7c.js",
+    "static/js/453.0ccb7fb4.chunk.js": "/seongyurim/weather-app-2024.git/static/js/453.0ccb7fb4.chunk.js",
+    "static/media/reset.png": "/seongyurim/weather-app-2024.git/static/media/reset.ce0067aae3fa05332883.png",
+    "index.html": "/seongyurim/weather-app-2024.git/index.html",
+    "main.86551299.css.map": "/seongyurim/weather-app-2024.git/static/css/main.86551299.css.map",
+    "main.cdc2bb7c.js.map": "/seongyurim/weather-app-2024.git/static/js/main.cdc2bb7c.js.map",
+    "453.0ccb7fb4.chunk.js.map": "/seongyurim/weather-app-2024.git/static/js/453.0ccb7fb4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86551299.css",
+    "static/js/main.cdc2bb7c.js"
+  ]
+}
