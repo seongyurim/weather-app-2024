@@ -16,6 +16,7 @@ function App() {
   const [weather, setWeather] = useState(null); // 날씨설정
   const [city, setCity] = useState(null); // 도시설정
   const [reloading, setReloading] = useState(false); // 동일 위치 리로드
+  const [apiError, setApiError] = useState(""); // API 호출 에러 핸들링
 
   // 현재 위치의 경도와 위도 가져오기
   const getCurrentLocation = () => {
@@ -28,22 +29,45 @@ function App() {
 
   // 현재 위치(경도, 위도)를 기반으로 날씨 객체 받아오기
   const getWeatherByCurrentLocation = async(lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-    setLoading(true); // API 데이터 fetch 전이므로 로딩스피너 보여주기
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data); // 받아온 날씨 정보를 weather 상태변수에 담기
-    setLoading(false); // 데이터 fetch가 완료되었으므로 로딩스피너 가리기
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+      setLoading(true);
+      let response = await fetch(url);
+      let data = await response.json();
+      setWeather(data);
+      setLoading(false);
+    }
+    catch (err) {
+      setApiError(err.message);
+      setLoading(false);
+      console.error("Error by getWeatherByCurrentLocation(): ", + err.message);
+    }
   }
 
   // 도시명을 기반으로 날씨 객체 받아오기
   const getWeatherByCity = async() => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-    setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data);
-    setLoading(false);
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+      setLoading(true);
+      let response = await fetch(url);
+      let data = await response.json();
+      setWeather(data);
+      setLoading(false);
+    }
+    catch (err) {
+      setApiError(err.message);
+      setLoading(false);
+      console.error("Error by getWeatherByCity(): ", + err.message);
+    }
+  }
+  
+  const handleCityChange = (city) => {
+    setReloading(prev => !prev);
+    if (city === "current") {
+      setCity(null);
+    } else {
+      setCity(city);
+    }
   }
 
   useEffect(() => {
@@ -54,30 +78,16 @@ function App() {
     }
   }, [city, reloading]);
 
-  const handleCityChange = (city) => {
-    if (city === "current") {
-      setCity(null);
-      setReloading(prev => !prev);
-    } else {
-      setCity(city);
-      setReloading(prev => !prev);
-    }
-  }
-
-  const resetPage = () => {
-    handleCityChange("current");
-  }
-
   return (
     <div>
       {loading ? (
         <div className="container">
           <ClipLoader color="#fff" loading={loading} size={100} />
         </div>
-      ): (
+      ) : !apiError ? (
         <div className="whole">
           <div className="container">
-            <button className="reset-btn" onClick={resetPage}>
+            <button className="reset-btn" onClick={() => handleCityChange("current")}>
               <img src={resetImg} className="reset-img" alt="Refresh Game"/>
             </button>
             <div className="wrapper-left">
@@ -85,12 +95,17 @@ function App() {
             </div>
             <div className="wrapper-right">
               <Details weather={weather}/>
-              <Locations cities={cities} setCity={setCity} handleCityChange={handleCityChange}
-                selectedCity={city}/>
+              <Locations
+                cities={cities}
+                selectedCity={city}
+                handleCityChange={handleCityChange}
+              />
             </div>
             <footer>© seongyurim, July 2024</footer>
           </div>
         </div>
+      ) : (
+        <div className="error-message">{apiError}</div>
       )}
     </div>
   );

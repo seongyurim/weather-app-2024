@@ -1,14 +1,8 @@
 import React from 'react';
 
 const WeatherBox = ({weather}) => {
-  // 매개변수로 props를 쓰면 값을 가져다 쓸 때마다 props.weather.@@를 써야 해서 번거로워진다.
-  // 이를 개선하는 방법으로 디스트럭처링을 사용할 수 있다. {weather}이 그것이다.
-  // 이렇게 작성하면 매개변수 객체에서 필요한 것만 간단하게 꺼내어 쓸 수 있게 된다.
-  // {weather} = props에 있는 weather를 가져 올게요!
-  // 콘솔로 테스트해보자.
-  console.log("Weather?!", weather);
 
-  // 날씨 description의 첫단어만 대문자로 변경
+  // 날씨 description의 첫 문자만 대문자로 변경
   function capitalizeWords(str) {
     if (!str) return "";
     return str.replace(/\b\w/g, char => char.toUpperCase());
@@ -36,7 +30,7 @@ const WeatherBox = ({weather}) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WeatherBox
+export default WeatherBox;
