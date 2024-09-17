@@ -36,13 +36,13 @@
 - 이때는 `city`에 저장된 도시명이 API 호출 시 쿼리 파라미터로 사용됩니다.
 
 ### 3) API 호출
-- [**Geolocation API**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition){:target="_blank"}: 현재 위치의 위도와 경도를 가져옵니다.
+- [**Geolocation API**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition): 현재 위치의 위도와 경도를 가져옵니다.
 ```
 navigator.geolocation.getCurrentPosition((position) => {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
 ```
-- **OpenWeatherMap API**: 해당 도시의 날씨 데이터를 가져옵니다.
+- [**OpenWeatherMap API**](https://openweathermap.org/current): 해당 도시의 날씨 데이터를 가져옵니다.
 ```
 https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
 ```
@@ -77,7 +77,7 @@ const getWeatherByCurrentLocation = async(lat, lon) => {
 
 ### 6) 로딩스피너
 - API의 응답을 기다리는 동안 유저에게 로딩스피너를 보여줍니다.
-- 로딩스피너는 **react-spinners**를 통해 간편하게 구현할 수 있습니다.
+- 로딩스피너는 [**react-spinners**](https://www.npmjs.com/package/react-spinners)를 통해 간편하게 구현할 수 있습니다.
 - 로딩스피너는 사용자에게 앱이 정상적으로 작동중임을 알리며 사용자 경험을 개선합니다.
 - `loading` 상태로 로딩스피너의 가시성 여부를 관리합니다.
 - 조건부 렌더링을 통해 `loading`이 `true`인 경우에만 로딩스피너를 보여줍니다.
