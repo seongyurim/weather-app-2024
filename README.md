@@ -40,7 +40,7 @@
 - OpenWeatherMap API를 통해 해당 도시의 날씨 데이터를 가져옵니다.
 	- 위치(위도, 경도) 기반
 
-	https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
+    https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
 
    
  	- 도시명 기반
