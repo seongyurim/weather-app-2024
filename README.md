@@ -50,6 +50,20 @@ https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AP
 https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
 ```
 - try~catch문과 apiError 상태를 통해 API 호출 에러를 핸들링합니다.
+```
+const getWeatherByCurrentLocation = async(lat, lon) => {
+  try {
+    API Call...
+    setWeather(data);
+    setLoading(false);
+  }
+  catch (err) {
+    setApiError(err.message);
+    setLoading(false);
+    console.error("Error by getWeatherByCurrentLocation: ", + err.message);
+  }
+}
+```
 
 ### 4) 레이아웃에 따른 컴포넌트화
 - 페이지의 왼쪽, 오른쪽 상단, 오른쪽 하단의 정보들을 컴포넌트로 관리합니다.
