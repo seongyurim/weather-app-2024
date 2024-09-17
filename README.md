@@ -36,7 +36,7 @@
 - 이때는 `city`에 저장된 도시명이 API 호출 시 쿼리 파라미터로 사용됩니다.
 
 ### 3) API 호출
-- **Geolocation API**: 현재 위치의 위도와 경도를 가져옵니다.
+- [**Geolocation API**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition): 현재 위치의 위도와 경도를 가져옵니다.
 ```
 navigator.geolocation.getCurrentPosition((position) => {
   let lat = position.coords.latitude;
