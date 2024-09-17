@@ -80,4 +80,4 @@ const getWeatherByCurrentLocation = async(lat, lon) => {
 - 로딩스피너는 **react-spinners**를 통해 간편하게 구현할 수 있습니다.
 - 로딩스피너는 사용자에게 앱이 정상적으로 작동중임을 알리며 사용자 경험을 개선합니다.
 - `loading` 상태로 로딩스피너의 가시성 여부를 관리합니다.
-- 조건부 렌더링을 통해 `loading`이 true인 경우에만 로딩스피너를 보여줍니다.
+- 조건부 렌더링을 통해 `loading`이 `true`인 경우에만 로딩스피너를 보여줍니다.
