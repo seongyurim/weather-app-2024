@@ -49,6 +49,7 @@ https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AP
 ```
 https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric // 도시명 기반
 ```
+- try~catch문과 apiError 상태를 통해 API 호출 에러를 핸들링합니다.
   
 
 ### 4) 레이아웃에 따른 컴포넌트화
