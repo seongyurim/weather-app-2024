@@ -39,12 +39,17 @@
 - Geolocation API를 통해 현재 위치의 위도와 경도를 가져옵니다.
 - OpenWeatherMap API를 통해 해당 도시의 날씨 데이터를 가져옵니다.
 	- 위치(위도, 경도) 기반
- 
+
 ```
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 ```
 
  	- 도시명 기반
+
+```
+https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
+```
+
   
 
 ### 4) 레이아웃에 따른 컴포넌트화
