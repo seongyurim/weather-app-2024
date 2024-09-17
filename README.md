@@ -41,10 +41,10 @@
 	- 위치(위도, 경도) 기반
 
 ```
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
 ```
 
- 	- 도시명 기반
+	- 도시명 기반
 
 ```
 https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
