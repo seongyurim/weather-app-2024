@@ -36,21 +36,20 @@
 - 이때는 `city`에 저장된 도시명이 API 호출 시 쿼리 파라미터로 사용됩니다.
 
 ### 3) API 호출
-- Geolocation API를 통해 현재 위치의 위도와 경도를 가져옵니다.
+- **Geolocation API**: 현재 위치의 위도와 경도를 가져옵니다.
 ```
 navigator.geolocation.getCurrentPosition((position) => {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
 ```
-- OpenWeatherMap API를 통해 해당 도시의 날씨 데이터를 가져옵니다.
+- **OpenWeatherMap API**: 해당 도시의 날씨 데이터를 가져옵니다.
 ```
-https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric // 위도, 경도 기반
+https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric
 ```
 ```
-https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric // 도시명 기반
+https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
 ```
 - try~catch문과 apiError 상태를 통해 API 호출 에러를 핸들링합니다.
-  
 
 ### 4) 레이아웃에 따른 컴포넌트화
 - 페이지의 왼쪽, 오른쪽 상단, 오른쪽 하단의 정보들을 컴포넌트로 관리합니다.
