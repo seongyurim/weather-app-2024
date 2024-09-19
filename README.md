@@ -1,4 +1,4 @@
-![Header](https://capsule-render.vercel.app/api?type=rect&color=f55225&text=WeatherNow&desc=현재%20시간%20및%20위치%20기반의%20날씨%20앱%20미니%20프로젝트&section=header&height=250&fontColor=ffffff&fontSize=60&fontAlignY=45&descAlignY=67&descSize=30)
+![Header](https://capsule-render.vercel.app/api?type=rect&color=e75906&text=WeatherNow&desc=현재%20시간%20및%20위치%20기반의%20날씨%20앱%20미니%20프로젝트&section=header&height=250&fontColor=ffffff&fontSize=60&fontAlignY=45&descAlignY=67&descSize=30)
 <br><br>
 
 ## 📍프로젝트 소개
