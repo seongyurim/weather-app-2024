@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const cities = ['Dublin', 'Montreal', 'Hong Kong', 'Vienna'];
-const API_KEY = "7d14207953b97208eecfcca8a8f46279";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
 
