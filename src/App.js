@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import WeatherBox from './component/WeatherBox';
 import Locations from './component/Locations';
 import Details from './component/Details';
 import ClipLoader from "react-spinners/ClipLoader";
 import resetImg from '../src/asset/reset.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 const cities = ['Dublin', 'Montreal', 'Hong Kong', 'Vienna'];
 const API_KEY = "7d14207953b97208eecfcca8a8f46279";
@@ -81,7 +81,7 @@ function App() {
   return (
     <div>
       {loading ? (
-        <div className="container">
+        <div className="whole">
           <ClipLoader color="#fff" loading={loading} size={100} />
         </div>
       ) : !apiError ? (
@@ -90,16 +90,18 @@ function App() {
             <button className="reset-btn" onClick={() => handleCityChange("current")}>
               <img src={resetImg} className="reset-img" alt="Refresh Game"/>
             </button>
-            <div className="wrapper-left">
-              <WeatherBox weather={weather}/>
-            </div>
-            <div className="wrapper-right">
-              <Details weather={weather}/>
-              <Locations
-                cities={cities}
-                selectedCity={city}
-                handleCityChange={handleCityChange}
-              />
+            <div className='wrapper'>
+              <div className="wrapper-left">
+                <WeatherBox weather={weather}/>
+              </div>
+              <div className="wrapper-right">
+                <Details weather={weather}/>
+                <Locations
+                  cities={cities}
+                  selectedCity={city}
+                  handleCityChange={handleCityChange}
+                />
+              </div>
             </div>
             <footer>© seongyurim, July 2024</footer>
           </div>

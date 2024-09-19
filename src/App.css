@@ -2,18 +2,16 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: #fff;
-    background: url(https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg);
-    background: url(https://images.pexels.com/photos/1033729/pexels-photo-1033729.jpeg); 
+    font-weight: 400;
+    color: #333;
+    background: linear-gradient(to bottom, #f3791c, #71ccca);
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    position: relative;
+    overflow-x: hidden;
 }
 
 button {
     font-weight: 300;
-    color: #fff;
     border: 0;
     padding: 0;
     background-color: transparent;
@@ -25,51 +23,53 @@ button:hover {
 }
 
 footer {
-    position: absolute;
-    left: 50%;
-    bottom: -4rem;
-    transform: translate(-50%);
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.5);
+    align-self: center;
 }
 
 .whole {
     width: 100vw;
-    height: 100vh;
-}
-
-.container {
+    min-height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
     width: 900px;
-    height: 60vh;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
     padding: 0;
+    position: relative;
+    margin: 2rem 1rem 2rem 1rem;
 }
 
 .reset-btn {
+    align-self: flex-end;
     border-radius: 1.2rem;
-    position: absolute;
-    top: -90px;
-    right: 0;
-    background-color: rgba(35, 35, 35, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .reset-img {
     height: 60px;
     padding: 10px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(230deg) brightness(103%) contrast(103%);
+    filter: invert(15%) sepia(5%) saturate(41%) hue-rotate(353deg) brightness(98%) contrast(86%);
+}
+
+.wrapper {
+    display: flex;
 }
 
 .wrapper-left,
 .wrapper-right {
-    background-color: rgba(35, 35, 35, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 100%;
+    height: inherit;
     padding: 50px;
 }
 
@@ -81,7 +81,6 @@ footer {
 
 .wrapper-right {
     flex: 1;
-    backdrop-filter: blur(4px);
     border-radius: 0 1.5rem 1.5rem 0;
 }
 
@@ -139,7 +138,7 @@ footer {
     font-weight: 500;
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .details-box {
@@ -171,7 +170,7 @@ footer {
     display: inline;
     width: 10px;
     height: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #333;
     background-color: transparent;
     border-radius: 50%;
     margin-bottom: 7px;
@@ -199,4 +198,74 @@ footer {
     border-radius: 1rem;
     font-weight: 500;
     text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper-left,
+    .wrapper-right {
+        padding: 2rem;
+    }
+
+    .wrapper-left {
+        border-radius: 1.5rem 1.5rem 0 0;
+        border-bottom: none;
+    }
+
+    .wrapper-right {
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 573px) {
+    body {
+        background: linear-gradient(to bottom, #ec7c28, #7fc1c0);
+        position: relative;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    footer {
+        font-size: 0.85rem;
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .reset-btn {
+        display: none;
+    }
+
+    .wrapper-left,
+    .wrapper-right {
+        padding: 1rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    .wrapper-left {
+        margin-bottom: 1rem;
+    }
+
+    .reset-btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    .title {
+        color: #ec6e4c;
+    }
 }
