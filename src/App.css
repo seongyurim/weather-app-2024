@@ -11,6 +11,7 @@ body {
 }
 
 button {
+    color: #333;
     font-weight: 300;
     border: 0;
     padding: 0;
