@@ -1,7 +1,6 @@
 import React from 'react';
 
 const WeatherBox = ({weather}) => {
-
   // 날씨 description의 첫 문자만 대문자로 변경
   function capitalizeWords(str) {
     if (!str) return "";

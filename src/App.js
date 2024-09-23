@@ -92,7 +92,7 @@ function App() {
             </button>
             <div className='wrapper'>
               <div className="wrapper-left">
-                <WeatherBox weather={weather}/>
+                <WeatherBox weather={weather} />
               </div>
               <div className="wrapper-right">
                 <Details weather={weather}/>
