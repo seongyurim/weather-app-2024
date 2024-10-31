@@ -14,7 +14,7 @@
 	<img src="https://img.shields.io/badge/API Call-E3695F?style=for-the-badge&logoColor=white"> 
 </div>
 
-## 📍강의 데모 페이지
+## 📍데모 페이지
 <img width="1479" alt="WeatherNow Demo" src="https://files.cdn.thinkific.com/file_uploads/523761/images/0ac/c3c/3d3/1648395289245.jpg">
 
 ## 📍주요기능
