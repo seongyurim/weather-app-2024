@@ -40,7 +40,7 @@
 
 ### 3) API 호출
 - [**Geolocation API**](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition): 현재 위치의 위도와 경도를 가져옵니다.
-```
+```javascript
 navigator.geolocation.getCurrentPosition((position) => {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -53,7 +53,7 @@ https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AP
 https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric
 ```
 - try~catch문과 apiError 상태를 통해 API 호출 에러를 핸들링합니다.
-```
+```javascript
 const getWeatherByCurrentLocation = async(lat, lon) => {
   try {
     API Call...
