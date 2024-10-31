@@ -15,7 +15,7 @@
 </div>
 
 ## 📍강의 데모 페이지
-<img width="1479" alt="RockPaperScissor Demo" src="https://files.cdn.thinkific.com/file_uploads/523761/images/0ac/c3c/3d3/1648395289245.jpg">
+<img width="1479" alt="WeatherNow Demo" src="https://files.cdn.thinkific.com/file_uploads/523761/images/0ac/c3c/3d3/1648395289245.jpg">
 
 ## 📍주요기능
 - **현재 위치 기반**: 사용자의 현재 위치를 기반으로 날씨를 실시간 제공합니다.
