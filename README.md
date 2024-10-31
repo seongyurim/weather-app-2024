@@ -14,6 +14,9 @@
 	<img src="https://img.shields.io/badge/API Call-E3695F?style=for-the-badge&logoColor=white"> 
 </div>
 
+## 📍강의 데모 페이지
+<img width="1479" alt="RockPaperScissor Demo" src="https://files.cdn.thinkific.com/file_uploads/523761/images/0ac/c3c/3d3/1648395289245.jpg">
+
 ## 📍주요기능
 - **현재 위치 기반**: 사용자의 현재 위치를 기반으로 날씨를 실시간 제공합니다.
 - **도시 선택 조회**: 미리 설정된 도시의 날씨를 조회할 수 있습니다.
